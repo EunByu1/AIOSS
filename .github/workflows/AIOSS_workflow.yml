@@ -27,6 +27,6 @@ jobs:
         shell : bash
 
       - name: The job has succeeded
-        if: ${{ sucess() }}
+        if: ${{ success() }}
         run: echo "successfully completed"
         
