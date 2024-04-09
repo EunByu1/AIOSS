@@ -21,7 +21,8 @@ jobs:
         
       # [python] 실행
       - name: run python 
-        run: python myapp.py
+        # run: python myapp.py
+        run: pip install -r requirements.txt
         shell: bash
         
       # 2번째 step에서 "Hello World"를 함
