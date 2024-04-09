@@ -1,0 +1,32 @@
+# My workflow
+
+name: My first workflow
+
+# Trigger: Webhook event
+on: [push, pull_request]
+
+jobs:
+  # job
+  job_1:
+    name: My first job
+    runs-on: ubuntu-latest
+    steps:
+      # 1번째 step
+      - name: My first step
+        uses: actions/checkout@v2
+
+      # 2번째 step에서 "Hello World"를 함
+      - name: My second step
+        run: echo "Hello World"
+        shell: bash
+
+      - name: My third step
+        run: |
+          echo "first hello"
+          echo "second hello!"
+        shell : bash
+
+      - name: The job has succeeded
+        if: ${{ sucess() }}
+        run: echo "successfully completed"
+        
